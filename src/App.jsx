@@ -4,7 +4,7 @@ import Particles from "./Particles";
 import Header from "./screens/header/Header";
 import AboutMe from "./screens/aboutMe/AboutMe";
 
-import Portfolio from "./screens/portfolio/Portfolio";
+// import Portfolio from "./screens/portfolio/Portfolio";
 // import { ContactForm } from "./screens/contactForm/ContactForm";
 import ContactMe from "./screens/contactMe/ContactMe";
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Header />
       <Particles />
       <AboutMe />
-      <Portfolio />
+      {/* <Portfolio /> */}
       {/* <ContactForm/> */}
       <ContactMe />
     </div>
