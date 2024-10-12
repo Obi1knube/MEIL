@@ -3,9 +3,14 @@ import "./header.css";
 function Header() {
   return (
     <div className="main-Info">
-      <h1>Maintenance Engineering shift covers & Call-Outs</h1>
-      <p> <b>Tel: (+44) 7833 464 281</b></p> 
-      <h2> What is our mission?</h2>
+      <h1>Multi-skilled Maintenance Engineers, for shift covers & Call-Outs</h1>
+
+      <p>
+        {" "}
+        <b>Tel: (+44) 7833 464 281</b>
+      </p>
+      <div></div>
+      <h2> Our services?</h2>
       <ReactTyped
         strings={[
           "",
@@ -16,16 +21,16 @@ function Header() {
           " Mechanical Maintenance services",
           "To a diverse ",
           "Range of clients",
-          "Count on Us",
-          "For your Company Web Development ",
+          "Count on Us For",
+          "PLC and VFD controlled Automation ",
           "And",
-          "Web Search Engine Optimisation ",
+          "Modern App and Web development ",
 
           "",
           "",
         ]}
-        typespeed={40}
-        backspeed={50}
+        typeSpeed={10}
+        backSpeed={90}
         loop
       ></ReactTyped>
     </div>

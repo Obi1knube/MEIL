@@ -12,13 +12,13 @@ export const navigationLinks = [
   //   ref: "#technologies",
   // },
   {
-    name:"Our Clients",
+    name:"OUR CLIENTS",
     ref :"#clients",
   },
-  {
-    name: "PORTFOLIO",
-    ref: "#portfolio",
-  },
+  // {
+  //   name: "PORTFOLIO",
+  //   ref: "#portfolio",
+  // },
   {
     name: "CONTACT US",
     ref: "#contact",
