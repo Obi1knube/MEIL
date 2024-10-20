@@ -10,4 +10,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   </React.StrictMode>
 );
 
-//this is acting as entry point for my app, just like index.js
+

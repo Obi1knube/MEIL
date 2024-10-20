@@ -1,13 +1,13 @@
 import "./contactMe.css";
-import { navigationLinks } from "../../helpers/navigationLinks";
+import { createLinks } from "./createLinks.jsx";
 
-export function createLinks() {
-  return navigationLinks.map((e, idx) => (
-    <p key={idx}>
-      <a href={e.ref}> {e.name} </a>
-    </p>
-  ));
-}
+// export function createLinks() {
+//   return navigationLinks.map((e, idx) => (
+//     <p key={idx}>
+//       <a href={e.ref}> {e.name} </a>
+//     </p>
+//   ));
+// }
 
 export default function ContactMe() {
   return (
