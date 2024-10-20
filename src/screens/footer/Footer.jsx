@@ -1,17 +1,9 @@
-import "./contactMe.css";
+import "./footer.css";
 import { createLinks } from "./createLinks.jsx";
-
-// export function createLinks() {
-//   return navigationLinks.map((e, idx) => (
-//     <p key={idx}>
-//       <a href={e.ref}> {e.name} </a>
-//     </p>
-//   ));
-// }
-
-export default function ContactMe() {
+function Footer() {
   return (
-    <div className="contactMe_container" id="contact">
+    // <div className="contactMe_container" id="contact">
+    <div className="contactMe_container" id="footer">
       <div className="contactMe_data_links">
         <div>
           <p>Stourbridge, United Kingdom</p>
@@ -29,3 +21,4 @@ export default function ContactMe() {
     </div>
   );
 }
+export default Footer;

@@ -17,4 +17,8 @@ export const navigationLinks = [
     name: "CONTACT US",
     ref: "#contact",
   },
+  // {
+  //   name: "Company Address",
+  //   ref: "#footer"
+  // }
 ];

@@ -2,8 +2,8 @@
 import "./App.css";
 import Particles from "./Particles";
 import Header from "./screens/header/Header";
-import AboutMe from "./screens/aboutMe/AboutMe";
-import ContactMe from "./screens/footer/ContactMe";
+import AboutUs from "./screens/aboutUs/AboutUs";
+import Footer from "./screens/footer/Footer";
 import NavigationBar from "./screens/navigationBar/NavigationBar";
 import ContactForm from "./screens/contactForm/ContactForm";
 
@@ -13,9 +13,9 @@ function App() {
       <NavigationBar />
       <Header />
       <Particles />
-      <AboutMe />
+      <AboutUs />
       <ContactForm/>
-      <ContactMe />
+      <Footer />
     </div>
   );
 }

@@ -1,7 +1,7 @@
-import "./aboutMe.css";
+import "./aboutUs.css";
 import myPic from "../../images/Logo.png";
 
-function AboutMe() {
+function AboutUs() {
   return (
     <div className="about__container" id="about-me">
       <div>
@@ -26,4 +26,4 @@ function AboutMe() {
   );
 }
 
-export default AboutMe;
+export default AboutUs;

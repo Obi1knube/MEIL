@@ -1,7 +1,11 @@
-import "./contactForm.css";
-import { useState } from "react";
 
-function ContactForm() {
+  import "./contactForm.css";
+  // import { createLinks } from "./createLinks.jsx";
+  import { useState } from "react";
+  
+  function ContactForm() {
+
+ 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,7 +27,7 @@ function ContactForm() {
   };
   
   return (
-    <>
+    <div className="contactMe_container" id="contact">
 <h2> Contact Form</h2>
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name:</label>
@@ -54,8 +58,10 @@ function ContactForm() {
       />
       <button type="submit">Submit</button>
     </form>
-    </>
-  );
+    </div>
+  ); 
+  
+   
 }
 
 export default ContactForm;
