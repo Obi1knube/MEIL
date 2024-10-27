@@ -1,35 +1,33 @@
-import React from 'react';
+// import React from 'react';
+import clientData from "../../helpers/clientData" // Assuming clientData.jsx is in the same parent directory as screen/ourClient.jsx
 import './OurClients.css'; // Assuming you have a CSS file for styling
+import propTypes from "prop-types";
+
+function OurClientCard({ image, link, description }) {
+  return (
+    <div className="client-card">
+      <img src={image} alt="Client Logo" />
+      <div className="client-info">
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          {description}
+        </a>
+      </div>
+    </div>
+  );
+}
+
+OurClientCard.propTypes={
+  image: propTypes.string.isRequired,
+  link: propTypes.string.isRequired,
+  description: propTypes.string.isRequired,
+};
 
 function OurClients() {
-  const clientImages = [
-    // Replace these with your actual image URLs
-    'image1.jpg',
-    'image2.jpg',
-    'image3.jpg',
-    'image4.jpg',
-    'image5.jpg',
-    'image6.jpg',
-  ];
-
-  const renderClients = () => {
-    return clientImages.map((image, index) => {
-      const isRowStart = index % 3 === 0; // Check if it's the start of a new row
-      const isRowEnd = index % 3 === 2; // Check if it's the end of a row
-
-      return (
-        <div key={index} className={`client-image ${isRowStart ? 'row-start' : ''} ${isRowEnd ? 'row-end' : ''}`}>
-          <img src={image} alt={`Client ${index + 1}`} />
-        </div>
-      );
-    });
-  };
-
   return (
-    <div className="about__container" id="about-me">
     <div className="our-clients">
-      {renderClients()}
-    </div>
+      {clientData.map((client, index) => (
+        <OurClientCard key={index} {...client} /> // Spread operator for concise prop passing
+      ))}
     </div>
   );
 }

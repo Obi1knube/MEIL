@@ -1,23 +1,68 @@
+/* Container for all clients */
 .our-clients {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Client card styles */
+.client-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.client-card:hover {
+  transform: scale(1.05);
+}
+
+.client-card img {
+  width: 100%;
+  height: auto;
+}
+
+.client-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.client-info a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.client-info a:hover {
+  text-decoration: underline;
+}
+
+.client-text {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .client-card {
+    width: 45%;
   }
-  
-  .client-image {
-    flex: 1 0 auto;
-    margin: 10px;
-  }
-  
-  .client-image img {
+}
+
+@media screen and (max-width: 768px) {
+  .client-card {
     width: 100%;
-    height: auto;
   }
-  
-  .row-start {
-    /* Add styles for the start of a row, e.g., margin-left */
+}
+
+@media screen and (max-width: 700px) {
+  .client-text {
+    width: 300px;
   }
-  
-  .row-end {
-    /* Add styles for the end of a row, e.g., margin-right */
-  }
+}

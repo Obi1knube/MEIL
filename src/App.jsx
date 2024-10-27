@@ -6,6 +6,8 @@ import AboutUs from "./screens/aboutUs/AboutUs";
 import Footer from "./screens/footer/Footer";
 import NavigationBar from "./screens/navigationBar/NavigationBar";
 import ContactForm from "./screens/contactForm/ContactForm";
+import OurClients from "./screens/ourClients/OurClients";
+
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
       <Header />
       <Particles />
       <AboutUs />
+      <OurClients/>
       <ContactForm/>
       <Footer />
+      
     </div>
   );
 }
