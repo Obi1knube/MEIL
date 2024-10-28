@@ -5,7 +5,10 @@ import propTypes from "prop-types";
 
 function OurClientCard({ image, link, description }) {
   return (
+  
+  
     <div className="client-card">
+      
       <img src={image} alt="Client Logo" />
       <div className="client-info">
         <a href={link} target="_blank" rel="noopener noreferrer">
@@ -13,6 +16,7 @@ function OurClientCard({ image, link, description }) {
         </a>
       </div>
     </div>
+   
   );
 }
 
@@ -24,10 +28,13 @@ OurClientCard.propTypes={
 
 function OurClients() {
   return (
+    <div>
+    <h1>Our Clients</h1>
     <div className="our-clients">
       {clientData.map((client, index) => (
         <OurClientCard key={index} {...client} /> // Spread operator for concise prop passing
       ))}
+    </div>
     </div>
   );
 }
