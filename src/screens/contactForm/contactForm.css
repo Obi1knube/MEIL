@@ -12,19 +12,28 @@ h2 {
   color: #333;
 }
 
-form {
-  max-width: 600px;
-  margin: 0 auto;
+.contactUs_container {
+  max-width: 800px;
+  margin: 20px auto;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
 label {
   display: block;
   margin-bottom: 8px;
   color: #555;
+  font-weight: bold;
 }
 
 input[type="text"],
@@ -32,7 +41,6 @@ input[type="email"],
 textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
@@ -40,7 +48,7 @@ textarea {
 }
 
 textarea {
-  height: 150px;
+  height: 120px;
   resize: none;
 }
 
@@ -59,10 +67,29 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+button.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.submit-button:hover {
+  background-color: #0056b3;
+}
+
+button.submit-button:active {
+  background-color: #003d80;
+}
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
-  form {
+  .contactUs_container {
     padding: 15px;
   }
 
@@ -76,7 +103,7 @@ button:hover {
     font-size: 1.5rem;
   }
 
-  form {
+  .contactUs_container {
     padding: 10px;
   }
 
