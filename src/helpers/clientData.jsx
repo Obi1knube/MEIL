@@ -32,7 +32,8 @@ const clientData = [
   {
     image: webDeveloper,
     link: "https://portfolio-obiora-ezeasor.netlify.app/",
-    description: " Our Web Development Portfolio",
+    description:
+      " Visit Our Web Development Portfolio and see if we can help with your company App or website",
   },
 ];
 export default clientData;
