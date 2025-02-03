@@ -1,9 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import "./contactForm.css";
-
-// Initialize EmailJS
-emailjs.init("7iy7dtRAS54ma09gQ");
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -11,6 +8,10 @@ function ContactForm() {
     email: "",
     message: "",
   });
+
+  useEffect(() => {
+    emailjs.init("7iy7dtRAS54ma09gQ"); // Initialize EmailJS in useEffect
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,6 +23,7 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     emailjs
       .send(
         "service_2mk2c9n", // Replace with your actual Service ID
@@ -36,7 +38,7 @@ function ContactForm() {
           setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
-          console.error("Error sending email:", error.text);
+          console.error("Error sending email:", error);
           alert("Oops! Something went wrong. Please try again.");
         }
       );
