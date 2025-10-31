@@ -9,17 +9,18 @@ function AboutUs() {
       <div className="about__text">
         <h1>ABOUT US</h1>
         <p>
-          We are driven and outcome-focused professionals with a keen interest
-          in serving our customers well. We bring nearly two decades of rich
-          experience in Electrical/Mechanical Maintenance Engineering. Our
-          expertise spans various sectors, ranging from esteemed Commercial
-          Laundries, Food and Drink Industries, to Automotive Industries and
-          Waste Recycling to Energy Plants, as well as extensive experience in
-          Industrial Electrical and Electronic Installations. We are deeply
-          passionate about staying ahead of the curve with emerging
-          technologies, demonstrating a proven ability to adapt seamlessly to
-          evolving industry landscapes. We are able to integrate into your team
-          rapidly.
+          Electrical and Mechanical Maintenance with a modern, data-driven
+          approach to plant reliability. Our background covers commercial
+          laundries, food and beverage processing, automotive assembly, waste
+          recycling, and energy facilities, where we have delivered both
+          preventive and corrective maintenance on complex automated systems. We
+          are not just technicians—we are partners in performance. MEIL
+          understands the pressures of high-uptime manufacturing and brings the
+          flexibility of IR35-compliant contract engineering to strengthen your
+          in-house maintenance capability. We continuously evolve with emerging
+          technologies in controls, instrumentation, and predictive maintenance,
+          enabling clients to reduce downtime, extend equipment life, and
+          transition confidently toward Industry 4.0 standards.
         </p>
       </div>
     </div>

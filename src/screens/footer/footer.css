@@ -1,33 +1,35 @@
-.contactMe_container{
-    background-color: var(--nav-color);
-    color: aliceblue;
-    padding: 1rem;
-}
-.contactMe_data_links{
-    display: flex;
-    justify-content: space-evenly;
+.contactMe_container {
+  background-color: var(--nav-color);
+  color: aliceblue;
+  padding: 1rem;
 }
 
-contactMe_data_links a{
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
+.contactMe_data_links {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-contactMe_data_links a:hover{
-    color: var(--light-color);
+/* 👇 add dots to target the class */
+.contactMe_data_links a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
 }
+
+.contactMe_data_links a:hover {
+  color: var(--light-color);
+}
+
 /* #contactForm{
-    position: relative;
-    max-width: 200px;
-    bottom: 250px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  position: relative;
+  max-width: 200px;
+  bottom: 250px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 } */
 
-@media screen and (max-width:600px)  {
-    .contactMe_data_links {
-        flex-direction: column;
-    }
-    
+@media screen and (max-width: 600px) {
+  .contactMe_data_links {
+    flex-direction: column;
+  }
 }
