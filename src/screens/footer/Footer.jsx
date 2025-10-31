@@ -11,7 +11,7 @@ function Footer() {
           <div>
             <p>Stourbridge, United Kingdom</p>
             <p>Maintenance Engineering Insider Ltd</p>
-            <p>obiora@maintenanceEngineeringInsider.co.uk</p>
+            <p>info@maintenanceengineeringinsider.co.uk</p>
             <p>obi1knube@hotmail.com</p>
             <p>(+44) 783 346 4281</p>
           </div>
@@ -19,7 +19,7 @@ function Footer() {
         </div>
 
         <div style={{ textAlign: "center" }}>
-          Copyright&copy;{new Date().getFullYear()} Obiora Ezeasor
+          Copyright&copy;{new Date().getFullYear()} Created By Obiora Ezeasor
         </div>
       </div>
 
