@@ -2,7 +2,7 @@ import { useState } from "react"; // ✅ no default React import
 import "./ChatCTA.css";
 
 const CHAT_URL =
-  "https://chatgpt.com/g/g-688f94f218888191e4254895cc90-mei-customer-service";
+  "https://chatgpt.com/g/g-688f94f2188881919391e4254895cc90-mei-customer-service";
 
 export default function ChatCTA() {
   const [open, setOpen] = useState(false);
