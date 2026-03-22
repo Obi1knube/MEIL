@@ -7,18 +7,16 @@ export const navigationLinks = [
     name: "ABOUT US",
     ref: "#about-me",
   },
- 
   {
-    name:"OUR CLIENTS",
-    ref :"#clients",
+    name: "MEIL360",
+    ref: "#meil360",
   },
-  
+  {
+    name: "OUR CLIENTS",
+    ref: "#clients",
+  },
   {
     name: "CONTACT US",
     ref: "#contact",
   },
-  // {
-  //   name: "Company Address",
-  //   ref: "#footer"
-  // }
 ];
