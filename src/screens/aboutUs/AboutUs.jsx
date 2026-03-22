@@ -1,10 +1,17 @@
-// import React from "react"; // Ensure React is in scope
+// src/screens/aboutUs/AboutUs.jsx (path may differ slightly in your project)
 import "./aboutUs.css";
+import logo from "../../assets/images/logo.png"; // make sure this file exists with this exact name
 
 function AboutUs() {
   return (
     <div className="about__container" id="about-me">
-      <div className="about__image"></div>
+      <div className="about__image">
+        <img
+          src={logo}
+          alt="Maintenance Engineering Insider logo"
+          className="about__logo"
+        />
+      </div>
 
       <div className="about__text">
         <h1>ABOUT US</h1>

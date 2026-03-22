@@ -1,27 +1,38 @@
+/* Outer card */
 .about__container {
-  margin: 3rem 0;
+  margin: 2rem auto;
+  width: min(1100px, 100% - 2rem);  /* keeps it tidy when you have 2 cards */
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 500px;
+  align-items: stretch;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+  background: #000; /* so right side blend looks consistent */
 }
 
+/* Left side – logo */
 .about__image {
-  flex: 1; /* Takes up the left half */
-  background-image: url('../../assets/images/Logo.png'); /* Replace with the actual path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #ffffff;
 }
 
+.about__image img.about__logo {
+  max-width: 100%;
+  max-height: 260px;   /* stops logo from getting too tall */
+  object-fit: contain;
+}
+
+/* Right side – text */
 .about__text {
-  flex: 1; /* Takes up the right half */
+  flex: 1;
   max-width: 600px;
   text-align: left;
-  padding: 20px;
+  padding: 24px;
   color: #ffffff;
-  background-color: rgba(45, 2, 2, 0.5); /* Optional: adds a dark background for readability */
+  background-color: rgba(45, 2, 2, 0.85);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,25 +44,45 @@
 
 .about__text p {
   font-size: 1rem;
+  line-height: 1.5;
 }
 
-/*--------------MEDIA QUERIES --------------*/
+/* ---------- MEDIA QUERIES ---------- */
+
+/* Tablets / small laptops */
 @media only screen and (max-width: 900px) {
   .about__container {
-    flex-direction: column;
-    height: auto;
+    flex-direction: column;   /* logo on top, text under */
+    width: 100%;
+    margin: 1.5rem 0;
+    box-shadow: none;         /* lighter look on mobile */
   }
 
-  .about__image, .about__text {
-    flex: none;
-    width: 100%; /* Full width for smaller screens */
-    height: 250px; /* Adjust as necessary for smaller screens */
+  .about__image {
+    padding: 16px;
+  }
+
+  .about__image img.about__logo {
+    max-height: 200px;
+  }
+
+  .about__text {
+    padding: 16px 18px 20px;
   }
 }
 
+/* Phones */
 @media only screen and (max-width: 700px) {
   .about__text {
-    width: 90%;
-    padding: 15px;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .about__text p {
+    font-size: 0.95rem;
+  }
+
+  .about__image img.about__logo {
+    max-height: 180px;
   }
 }
