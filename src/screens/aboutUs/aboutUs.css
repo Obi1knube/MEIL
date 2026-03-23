@@ -1,57 +1,119 @@
-.about__container {
-  margin: 3rem 0;
-  display: flex;
-  flex-direction: row;
+.about {
   width: 100%;
-  height: 500px;
-  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 32px;
+  align-items: stretch;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--color-shadow);
 }
 
 .about__image {
-  flex: 1; /* Takes up the left half */
-  background-image: url('../../assets/images/Logo.png'); /* Replace with the actual path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2f6 100%);
+  border-right: 1px solid var(--color-border);
 }
 
-.about__text {
-  flex: 1; /* Takes up the right half */
-  max-width: 600px;
-  text-align: left;
-  padding: 20px;
-  color: #ffffff;
-  background-color: rgba(45, 2, 2, 0.5); /* Optional: adds a dark background for readability */
+.about__logo {
+  width: 100%;
+  max-width: 260px;
+  max-height: 260px;
+  object-fit: contain;
+}
+
+.about__content {
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.about__text h1 {
-  margin-bottom: 1rem;
+.about__eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brand);
 }
 
-.about__text p {
+.about__content h2 {
+  margin: 0 0 18px;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.15;
+  color: var(--color-text);
+}
+
+.about__lead {
+  margin: 0 0 16px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.about__content p {
+  margin: 0 0 16px;
   font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-soft);
 }
 
-/*--------------MEDIA QUERIES --------------*/
+.about__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.about__highlights span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--color-brand-soft);
+  color: var(--color-brand-dark);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
 @media only screen and (max-width: 900px) {
   .about__container {
-    flex-direction: column;
-    height: auto;
+    grid-template-columns: 1fr;
   }
 
-  .about__image, .about__text {
-    flex: none;
-    width: 100%; /* Full width for smaller screens */
-    height: 250px; /* Adjust as necessary for smaller screens */
+  .about__image {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: 28px;
+  }
+
+  .about__content {
+    padding: 28px 22px;
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .about__text {
-    width: 90%;
-    padding: 15px;
+@media only screen and (max-width: 600px) {
+  .about__content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about__content p {
+    font-size: 0.96rem;
+  }
+
+  .about__highlights span {
+    width: 100%;
+    justify-content: center;
   }
 }

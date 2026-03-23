@@ -1,18 +1,24 @@
-// import React from 'react';
-import clientData from "../../helpers/clientData"; // Assuming clientData.jsx is in the same parent directory as screen/ourClient.jsx
-import "./OurClients.css"; // Assuming you have a CSS file for styling
+import clientData from "../../helpers/clientData";
+import "./OurClients.css";
 import propTypes from "prop-types";
 
 function OurClientCard({ image, link, description }) {
   return (
-    <div className="client-card">
-      <img src={image} alt="Client Logo" />
-      <div className="client-info">
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          {description}
-        </a>
+    <article className="client-card">
+      <a
+        className="client-card__logo-wrap"
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit client website"
+      >
+        <img src={image} alt="Client logo" className="client-card__logo" />
+      </a>
+
+      <div className="client-card__body">
+        <p>{description}</p>
       </div>
-    </div>
+    </article>
   );
 }
 
@@ -24,14 +30,22 @@ OurClientCard.propTypes = {
 
 function OurClients() {
   return (
-    <div>
-      <h1>Our Clients</h1>
+    <section className="clients-section" id="clients">
+      <div className="clients-section__header">
+        <p className="clients-section__eyebrow">Trusted by Industry</p>
+        <h2>Factories and industrial businesses we have supported</h2>
+        <p className="clients-section__lead">
+          We support manufacturers and industrial operations with practical,
+          hands-on engineering cover, fault response and maintenance support.
+        </p>
+      </div>
+
       <div className="our-clients">
         {clientData.map((client, index) => (
-          <OurClientCard key={index} {...client} /> // Spread operator for concise prop passing
+          <OurClientCard key={index} {...client} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

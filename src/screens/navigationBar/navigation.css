@@ -1,16 +1,126 @@
 .navigation__container {
-  background-color: var(--nav-color);
-  color: white;
+  background: rgba(17, 24, 39, 0.94);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+  padding: 14px 0;
 }
-.navbar-light .navbar-nav .nav-link {
+
+.navigation__inner {
+  width: min(calc(100% - 32px), 1200px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.navigation__brand {
+  color: var(--font-color) !important;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin-right: 24px;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-nav .nav-link {
+  color: var(--font-color) !important;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 9px 10px !important;
+  border-radius: 999px;
+  transition: 0.2s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
   color: var(--font-color) !important;
 }
-.navbar-light .navbar-brand {
-  color: var(--font-color) !important;
+
+.navbar-light .navbar-toggler,
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.25);
 }
-.navbar-light .navbar-toggler-icon {
+
+.navbar-light .navbar-toggler-icon,
+.navbar-toggler-icon {
   filter: invert(1);
 }
-.links a:hover {
-  background-color: var(--font-color-hover);
+
+.navigation__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  margin-left: 16px;
+  border-radius: 999px;
+  background: var(--color-brand);
+  color: var(--color-white);
+  font-weight: 800;
+  white-space: nowrap;
+  transition: 0.25s ease;
+}
+
+.navigation__cta:hover {
+  background: var(--color-brand-dark);
+  color: var(--color-white);
+}
+
+@media screen and (max-width: 1200px) {
+  .navigation__brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.88rem;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 8px 9px !important;
+  }
+
+  .navigation__cta {
+    padding: 0 14px;
+    font-size: 0.92rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navigation__inner {
+    width: min(calc(100% - 24px), 1200px);
+  }
+
+  .navigation__brand {
+    font-size: 1.1rem;
+    margin-right: 12px;
+  }
+
+  .links {
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .navigation__cta {
+    margin: 12px 0 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navigation__container {
+    padding: 10px 0;
+  }
+
+  .navigation__brand {
+    font-size: 1rem;
+    max-width: 220px;
+    line-height: 1.2;
+  }
 }

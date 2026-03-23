@@ -1,9 +1,9 @@
 import { navigationLinks } from "../../helpers/navigationLinks";
 
 export function createLinks() {
-  return navigationLinks.map((e, idx) => (
+  return navigationLinks.map((link, idx) => (
     <p key={idx}>
-      <a href={e.ref}> {e.name} </a>
+      <a href={link.ref}>{link.name}</a>
     </p>
   ));
 }

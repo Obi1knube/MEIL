@@ -1,13 +1,116 @@
-.main-Info{
-  display: flex;
-  position: absolute;
-  color: var(--font-color);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.hero-content {
+  position: relative;
   z-index: 1;
+  max-width: 760px;
+  color: var(--color-white);
+  padding: 48px 0;
+}
+
+.hero-content__eyebrow {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f2c2c4;
+}
+
+.hero-content h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  line-height: 1.04;
+  font-weight: 800;
+  max-width: 780px;
+}
+
+.hero-content__lead {
+  margin: 0 0 22px;
+  max-width: 680px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-content__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.hero-content__meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.hero-content__typed-wrap {
+  max-width: 760px;
+  margin-bottom: 30px;
+  padding: 22px 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-content__typed-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f4d7d8;
+}
+
+.hero-content__typed {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.5;
+  min-height: 50px;
+}
+
+.hero-content__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content {
+    padding: 20px 0;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.08;
+  }
+
+  .hero-content__lead {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .hero-content__typed-wrap {
+    padding: 18px;
+  }
+
+  .hero-content__meta span {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-content__actions {
+    flex-direction: column;
+  }
+
+  .hero-content__actions .btn {
+    width: 100%;
+  }
 }
