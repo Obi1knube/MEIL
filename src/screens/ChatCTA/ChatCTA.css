@@ -2,52 +2,56 @@
 .mei-callout-fab {
   position: fixed;
   right: 18px;
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 24px rgba(15, 23, 32, 0.2);
   z-index: 9999;
   cursor: pointer;
   border: none;
-  font-size: 24px;
+  font-size: 22px;
   text-decoration: none;
   color: #fff;
-  background: #0056b3;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 }
+
 .mei-chat-fab {
   bottom: 18px;
+  background: #0b63c9;
 }
+
 .mei-callout-fab {
-  bottom: 84px;
-  background: #0b8f3a;
+  bottom: 80px;
+  background: #14803c;
 }
+
 .mei-chat-fab:hover,
 .mei-callout-fab:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(15, 23, 32, 0.24);
 }
 
 .mei-chat-disclaimer {
   position: fixed;
   right: 18px;
-  bottom: 150px;
-  max-width: 280px;
-  font-size: 12px;
-  color: #444;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 8px 10px;
-  border-radius: 8px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  bottom: 144px;
+  width: 250px;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: #4b5563;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 10px 12px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 32, 0.14);
+  border: 1px solid rgba(217, 224, 231, 0.9);
   z-index: 9998;
 }
-@media (max-width: 480px) {
-  .mei-chat-disclaimer {
-    right: 12px;
-    bottom: 146px;
-    max-width: 70vw;
-    font-size: 11px;
-  }
+
+.mei-chat-disclaimer strong {
+  color: #1f2937;
+  font-weight: 800;
 }
 
 .mei-modal-backdrop {
@@ -57,49 +61,133 @@
   z-index: 10000;
   display: grid;
   place-items: center;
+  padding: 20px;
 }
+
 .mei-modal {
-  width: 75vw; /* narrower: roughly 1/4 smaller */
-  max-width: 390px; /* 520px → 390px */
-  max-height: 75vh; /* don’t let it exceed 75% of viewport height */
+  width: min(92vw, 420px);
+  max-height: 80vh;
   background: #fff;
-  border-radius: 12px;
-  padding: 14px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
-  overflow-y: auto; /* scroll inside instead of cutting off button */
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+  overflow-y: auto;
 }
+
+.mei-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.mei-modal__header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #16202a;
+}
+
+.mei-modal__close {
+  border: none;
+  background: transparent;
+  color: #4b5563;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
 .mei-form {
   display: grid;
   gap: 10px;
 }
+
+.mei-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #16202a;
+}
+
 .mei-form input,
 .mei-form textarea,
 .mei-form select {
   width: 100%;
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d9e0e7;
+  font: inherit;
 }
-.mei-form button {
-  padding: 10px 14px;
+
+.mei-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.mei-form small {
+  color: #5b6672;
+  line-height: 1.5;
+}
+
+.mei-form__submit {
+  padding: 11px 14px;
   border: none;
-  border-radius: 8px;
-  background: #0056b3;
+  border-radius: 10px;
+  background: #0b63c9;
   color: #fff;
+  font-weight: 800;
   cursor: pointer;
 }
-.ok {
-  color: #0b8f3a;
-  margin-top: 6px;
+
+.mei-form__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
+
+.ok {
+  color: #14803c;
+  margin-top: 4px;
+}
+
 .err {
   color: #b30000;
-  margin-top: 6px;
+  margin-top: 4px;
 }
-@media (max-width: 480px) {
+
+@media (max-width: 900px) {
+  .mei-chat-disclaimer {
+    display: none;
+  }
+
+  .mei-chat-fab,
+  .mei-callout-fab {
+    width: 50px;
+    height: 50px;
+    right: 14px;
+  }
+
+  .mei-chat-fab {
+    bottom: 14px;
+  }
+
+  .mei-callout-fab {
+    bottom: 72px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mei-chat-fab,
+  .mei-callout-fab {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
   .mei-modal {
-    width: 90vw;
-    max-width: 360px;
-    max-height: 80vh;
+    width: min(94vw, 380px);
+    max-height: 82vh;
+    padding: 14px;
   }
 }
