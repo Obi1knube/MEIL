@@ -8,7 +8,7 @@ export const navigationLinks = [
     ref: "#about-me",
   },
   {
-    name: "MEIL360",
+    name: "PRODUCT",
     ref: "#meil360",
   },
   {

@@ -35,8 +35,9 @@ function App() {
                 <p className="section-eyebrow">Digital Product</p>
                 <h2>MEIL360</h2>
                 <p className="meil360-panel__lead">
-                  Browser-based downtime logging and maintenance visibility for
-                  factories.
+                  MEIL360 helps factories capture downtime faster, structure
+                  fault data properly, and give engineering teams clearer
+                  visibility into what is really happening on the plant floor.
                 </p>
 
                 <div className="meil360-grid">

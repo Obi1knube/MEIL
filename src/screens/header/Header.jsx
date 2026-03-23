@@ -4,43 +4,42 @@ import "./header.css";
 function Header() {
   return (
     <div className="hero-content">
-      <p className="hero-content__eyebrow">Maintenance Engineering Insider Ltd</p>
+      <p className="hero-content__eyebrow">
+        Maintenance Engineering Insider Ltd
+      </p>
 
-      <h1>
-        Electrical, Mechanical and Reliability Support for Modern Manufacturing
-      </h1>
+      <h1>Reduce downtime. Fix faster. Build smarter maintenance operations.</h1>
 
       <p className="hero-content__lead">
-        Practical maintenance engineering support for factories that need
-        stronger uptime, faster fault response, and a clearer path toward
-        smarter operations.
+        We support factories with practical electrical, mechanical and
+        reliability engineering input, while helping teams move from reactive
+        repairs toward better downtime data, clearer visibility and smarter
+        maintenance decisions through MEIL360.
       </p>
 
       <div className="hero-content__meta">
         <span>Stourbridge, United Kingdom</span>
         <span>Outside IR35 contract support</span>
-        <span>Tel: (+44) 7833 464 281</span>
+        <span>Engineering support + MEIL360</span>
       </div>
 
       <div className="hero-content__typed-wrap">
-        <span className="hero-content__typed-label">What we deliver</span>
+        <span className="hero-content__typed-label">
+          Support today. Smarter systems next.
+        </span>
         <div className="hero-content__typed">
           <ReactTyped
             strings={[
-              "Planned Preventive Maintenance (PPM)",
-              "Breakdown & Emergency Call-Outs",
-              "Shift Cover & Contract Support",
-              "Instrumentation & Calibration Services",
-              "PLC, VFD & Automation Support",
-              "Control Panel Upgrades & Installations",
-              "Predictive Maintenance Solutions",
-              "Energy & Process Optimisation",
-              "App & Web Tools for Smart Maintenance",
-              "Technical Documentation & Reporting",
+              "Electrical & mechanical maintenance support",
+              "Breakdown response and contract engineering cover",
+              "PPM, fault finding and plant reliability support",
+              "Downtime capture and visibility with MEIL360",
+              "Structured fault data for better engineering decisions",
+              "A practical path from reactive repairs to smarter maintenance",
             ]}
             typeSpeed={34}
             backSpeed={20}
-            backDelay={1200}
+            backDelay={1300}
             loop
           />
         </div>
@@ -48,18 +47,18 @@ function Header() {
 
       <div className="hero-content__actions">
         <a className="btn btn--primary" href="#contact">
-          Talk to Us
+          Get Engineering Support
         </a>
 
-        <a
-          className="btn btn--secondary"
-          href="https://app.maintenanceengineeringinsider.co.uk/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore MEIL360
+        <a className="btn btn--secondary" href="#meil360">
+          See MEIL360
         </a>
       </div>
+
+      <p className="hero-content__supporting-note">
+        For factories that need stronger maintenance delivery now and a better
+        digital foundation for the future.
+      </p>
     </div>
   );
 }
