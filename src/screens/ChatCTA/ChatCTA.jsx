@@ -5,6 +5,10 @@ import "./ChatCTA.css";
 const CHAT_URL =
   "https://chatgpt.com/g/g-688f94f2188881919391e4254895cc90-mei-customer-service";
 
+// No /api/leads backend exists in this repository. Keep the call-out form
+// disabled until its live VPS implementation has been inventoried and migrated.
+const CALL_OUT_ENABLED = false;
+
 export default function ChatCTA() {
   const [open, setOpen] = useState(false);
 
@@ -21,7 +25,7 @@ export default function ChatCTA() {
         💬
       </a>
 
-      <button
+      {CALL_OUT_ENABLED && <button
         className="mei-callout-fab"
         onClick={() => setOpen(true)}
         title="Request a Call-out"
@@ -29,14 +33,14 @@ export default function ChatCTA() {
         aria-label="Request a Call-out"
       >
         🚑
-      </button>
+      </button>}
 
       <div className="mei-chat-disclaimer" role="note">
         Guidance only. For hazards, power down if safe. Weekend call-outs:
         <strong> +44 78 334 64 281</strong>
       </div>
 
-      {open && (
+      {CALL_OUT_ENABLED && open && (
         <div className="mei-modal-backdrop" onClick={() => setOpen(false)}>
           <div className="mei-modal" onClick={(e) => e.stopPropagation()}>
             <div className="mei-modal__header">

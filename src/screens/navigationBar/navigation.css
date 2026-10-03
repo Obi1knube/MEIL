@@ -90,11 +90,40 @@
 @media screen and (max-width: 991px) {
   .navigation__inner {
     width: min(calc(100% - 24px), 1200px);
+    flex-wrap: wrap;
+    gap: 0 12px;
   }
 
   .navigation__brand {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+    white-space: normal;
+    overflow-wrap: anywhere;
     font-size: 1.1rem;
-    margin-right: 12px;
+    line-height: 1.2;
+    margin-right: 0;
+  }
+
+  .navigation__inner > .navbar-toggler {
+    flex: 0 0 44px;
+    width: 44px;
+    min-height: 44px;
+    padding: 6px;
+    margin-left: auto;
+  }
+
+  .navigation__inner > .navbar-collapse,
+  .navigation__inner > .collapsing {
+    flex-basis: 100%;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .navigation__inner > .navbar-collapse.show {
+    max-height: calc(100vh - 96px);
+    max-height: calc(100dvh - 96px);
+    overflow-y: auto;
   }
 
   .links {
@@ -120,7 +149,6 @@
 
   .navigation__brand {
     font-size: 1rem;
-    max-width: 220px;
     line-height: 1.2;
   }
 }

@@ -1,0 +1,13 @@
+{
+  "projects": {},
+  "targets": {
+    "meil360-paidtest": {
+      "hosting": {
+        "meil-website": [
+          "meil-public-website"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
