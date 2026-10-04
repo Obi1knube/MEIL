@@ -29,7 +29,7 @@ function ContactForm() {
 
     emailjs
       .send(
-        "service_2mk2c9n",
+                "service_vpstn5a",
         "template_fs7sczg",
         formData,
         "7iy7dtRAS54ma09gQ"
